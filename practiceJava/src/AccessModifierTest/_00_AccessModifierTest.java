@@ -1,6 +1,8 @@
 package AccessModifierTest;
 
 import Class.BlackBoxRefurbish;
+//import Class.*
+// Class 폴더 안에 모든 Class 다 import
 
 public class _00_AccessModifierTest {
     public static void main(String[] args) {
