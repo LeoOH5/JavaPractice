@@ -6,6 +6,9 @@ public class Camera { //부모 클래스
     public Camera() {
         this.name = "카메라";
     }
+    public Camera(String name) {
+        this.name = name;
+    }
 
     public void takePicture() {
         // 사진 촬영
