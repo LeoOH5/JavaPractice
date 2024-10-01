@@ -64,6 +64,34 @@ public class _16_Reference {
         // 참조 관계를 끊고 싶으면 null 값을 넣기
         camera2 = null;
 
+
+        System.out.println("------------------------------");
+        // 만약 관계를 끊고 다시 값을 넣고 싶다면 temp 방식을 이용하면 된다.
+        // 아래는 예시이다.
+
+        Camera c1 = new Camera();
+        c1.name = "카메라1";
+        Camera c2 = new Camera();
+        c2.name = "카메라2";
+
+        Camera tempC2 = c2;
+        System.out.println(c1.name + " " + c2.name);
+
+        c2 = c1;
+        System.out.println(c1.name + " " + c2.name);
+
+        c2 = null;
+        c2 =tempC2;
+
+        System.out.print(c1.name + " " + c2.name);
+
+        // c1 하고 c2 둘 다 새로운 메모리에 할당 된 것 즉 새로운 메모리에 참조된 상황이다.
+        // tempC2에 c2를 참조시킴으로서 c2 와 tempC2는 같은 메모리를 참조하는 상황
+        // tempC2 -> c2 -> 메모리    관계가 아닌
+        // c2 -> 메모리 <- tempC2 관계인 것
+
+
+
     }
     public static void ChangeName(Camera camera) {
         camera.name = "잘못된 카메라";
